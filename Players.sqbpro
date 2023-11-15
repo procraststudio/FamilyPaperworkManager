@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/User/source/repos/FamilyPaperworkManager/FamilyPaperworkManager/Players.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="815"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="&amp;Integrity Check">PRAGMA integrity_check;
+SELECT * FROM Competitors;
+SELECT name FROM Competitors WHERE name='White';
+ </sql><sql name="&amp;Integrity Check">PRAGMA integrity_check;</sql><current_tab id="1"/></tab_sql></sqlb_project>

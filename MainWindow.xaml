@@ -1,0 +1,109 @@
+﻿<Window x:Class="FamilyPaperworkManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FamilyPaperworkManager"
+        mc:Ignorable="d"
+        Title="Family Paperwork Manager" Height="450" Width="1000">
+    <Window.Resources>
+        <Style x:Key="ButtonHoverStyle" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+
+                    <Setter Property="TextElement.Foreground" Value="Black" />
+                    <Setter Property="Background" Value="White" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*" />
+            <ColumnDefinition Width="420*" />
+            <ColumnDefinition Width="30*" />
+        </Grid.ColumnDefinitions>
+        <Border x:Name="Border" BorderBrush="#FFBBB6B6" BorderThickness="1" Grid.Column="0" RenderTransformOrigin="0.508,0.527" Background="#FF0B1153"/>
+        <Image x:Name="user_image" HorizontalAlignment="Center" Height="32" Margin="-120,12,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="-0.174,0.496" Source="/user.png"/>
+
+
+        <Button x:Name="Contracts_button" HorizontalContentAlignment="Left" Content="Contracts" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Click="Contracts_button_Click" Foreground="#FFFBF9F9" FontWeight="SemiBold"/>
+        <Button x:Name="Invoices_button" HorizontalContentAlignment="Left" Content="Invoices" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Click="Invoices_button_Click" Foreground="#FFFBF9F9" FontWeight="SemiBold"/>
+        <Button x:Name="Insurance_button" HorizontalContentAlignment="Left" Content="Insurance" HorizontalAlignment="Center" Margin="0,138,0,0" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Foreground="#FFFBF9F9" FontWeight="SemiBold" Click="Insurance_button_Click"/>
+        <Button x:Name="Duty_docs_Button" HorizontalContentAlignment="Left" Content="Duty docs" HorizontalAlignment="Center" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Margin="0,163,0,0" Foreground="#FFFBF9F9" FontWeight="SemiBold" Click="Duty_docs_Button_Click"/>
+        <Button x:Name="Settings_Button" HorizontalContentAlignment="Left" Content="Settings" HorizontalAlignment="Center" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Margin="0,188,0,0" Foreground="#FFFBF9F9" FontWeight="SemiBold"/>
+        <Button x:Name="Profile_Button" HorizontalContentAlignment="Left" Content="Profile" HorizontalAlignment="Center" VerticalAlignment="Top" Width="117" Height="25" FontSize="16" Background="#FF0B1153" Style="{StaticResource ButtonHoverStyle}" BorderBrush="#00000000" Margin="0,213,0,0" Foreground="#FFFBF9F9" FontWeight="SemiBold"/>
+
+        
+
+        <StackPanel x:Name="Menu_panel" Width="260" Height="48" Margin= "5,5,10,0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:Name="Edit_button" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.136,-0.349" Height="25" Width="25" BorderBrush="White" Click="Edit_button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UX-UI-Icon_processed-26.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Download_button" Grid.Column="1" HorizontalAlignment="Center" Margin="60,-25,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.136,-0.349" Height="25" Width="25" BorderBrush="White" Visibility="Hidden">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UX-UI-Icon_processed-43.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Delete_button" Grid.Column="1" HorizontalAlignment="Center" Margin="-30,-25,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.136,-0.349" Height="25" Width="25" BorderBrush="White" Click="Delete_button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UX-UI-Icon_processed-14 - Copy.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="NewDocument_button" Grid.Column="1" HorizontalAlignment="Center" Margin="60,-25,180,0" VerticalAlignment="Center" RenderTransformOrigin="0.136,-0.349" Height="25" Width="25" BorderBrush="White" Click="NewDocument_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UX-UI-Icon_processed-46.png"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="Edit_text" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Edit" Width="25" FontWeight="Bold" FontSize="9" TextAlignment="Center" Height="10"/>
+            <TextBlock x:Name="Download_text" TextWrapping="Wrap" Margin="0,-10,-60,0" Text="Download" Width="47" FontWeight="Bold" FontSize="9" TextAlignment="Center" Height="13" Visibility="Hidden"/>
+            <TextBlock x:Name="Delete_text" TextWrapping="Wrap" Margin="0,-13,25,0" Text="Delete" Width="47" FontWeight="Bold" FontSize="9" TextAlignment="Center" Height="13"/>
+            <TextBlock x:Name="AddDocument_text" TextWrapping="Wrap" Margin="0,-13,120,0" Text="New" Width="47" FontWeight="Bold" FontSize="9" TextAlignment="Center" Height="13"/>
+            <StackPanel Orientation="Vertical"/>
+        </StackPanel>
+        <DataGrid x:Name="Document_GridView" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding}" Grid.Column="1" Margin="10,58,10,32" MouseDoubleClick="Document_GridView_MouseDoubleClick" CellEditEnding="Document_GridView_CellEditEnding" Background="#FFF7F7F7" Foreground="Black">
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="BorderBrush" Value="#028dff"/>
+                    <Setter Property="BorderThickness" Value="0.8"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding ID}" />
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="EndOfContractDate" Binding="{Binding EndOfContractDate}" />
+                <DataGridTextColumn Header="moneyToPay" Binding="{Binding moneyToPay}" />
+                <DataGridTextColumn Header="DutyDate" Binding="{Binding DutyDate}" >
+                    
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Foreground" Value="Black" />
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Insurance End" Binding="{Binding EndOfInsuranceDate}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="User_name" Content="Marek Kowal" HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.287" Height="22" Width="79" Foreground="#FFFBF2F2" FontSize="11" FontStretch="Expanded" FontWeight="Bold"/>
+        <Label x:Name="User_label" Content="User" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.579,-0.287" Height="23" Width="66" Foreground="#FF028DFF" FontSize="10" FontStretch="Expanded" FontWeight="Bold" Margin="-10,25,0,0"/>
+       
+    </Grid>
+</Window>
