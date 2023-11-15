@@ -50,7 +50,7 @@ List the ready features here:
     
 Screenshots
 
-ArtStation - Family Paperwork Manager, Krzysztof Pietrzak 
+https://www.artstation.com/artwork/yDx183
 
 Setup
 
