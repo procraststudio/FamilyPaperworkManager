@@ -69,8 +69,15 @@ Room for Improvement
     • Auto-numbering system
     
     • Reminder bar
-    
+
+    • Viewieng images of documents
+
+   • Auto-numbering system
+
+   • Reminder bar
+
     • Working version for Android and WebGL
+
     
 
 
