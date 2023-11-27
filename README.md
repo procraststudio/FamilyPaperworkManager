@@ -1,6 +1,3 @@
-https://www.timetodice.com/wp-content/uploads/2023/11/krzysztof-pietrzak-fpm-03.jpg
-https://www.timetodice.com/wp-content/uploads/2023/11/krzysztof-pietrzak-fpm-01.jpg
-https://www.timetodice.com/wp-content/uploads/2023/11/krzysztof-pietrzak-fpm-02.jpg
 
 Project Name
     • "Family Paperwork Manager” .NET application
