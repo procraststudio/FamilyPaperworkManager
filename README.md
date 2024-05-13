@@ -50,8 +50,8 @@ List the ready features here:
     • 3 kinds of documents (Contracts, Invoices, Insurance)
     
 Screenshots
-
-https://www.artstation.com/artwork/yDx183
+![FPM_01](https://github.com/procraststudio/FamilyPaperworkManager/assets/74543252/e995332b-af26-478f-b516-4b70399d614a)
+![FPM_03](https://github.com/procraststudio/FamilyPaperworkManager/assets/74543252/4257b822-0397-461f-ab36-9d1f032a56f9)
 
 Setup
 
